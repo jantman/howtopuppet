@@ -3,6 +3,11 @@ howtopuppet
 
 howtopuppet.com - FAQ site for Puppet and related technologies
 
+What
+----
+This is intended to be a curated, up-to-date, _linkable_ repository for common
+questions and explanations, errors, and patterns.
+
 Why
 ---
 
@@ -19,6 +24,28 @@ such as the [puppet-users google group](http://groups.google.com/group/puppet-us
 [#puppet](http://webchat.freenode.net/?channels=puppet) on Freenode, and the [ask.puppetlabs.com](http://ask.puppetlabs.com/)
 Q&A site. This isn't intended to replace any of them. This is intended to be a curated, up-to-date, _linkable_
 repository for common questions and explanations, errors, and patterns.
+
+Contributing
+------------
+
+1. [Fork the repository](https://github.com/jantman/howtopuppet/fork)
+2. check out the ``gh-pages`` branch
+3. make your changes
+4. Optionally (but recommended) test locally (see below)
+5. Submit a pull request
+
+Testing Locally
+---------------
+
+For the details, see the GitHub [Using Jekyll with Pages](https://help.github.com/articles/using-jekyll-with-pages) page.
+
+In short:
+
+1. Clone the repo locally
+2. Checkout master
+3. ``bundle install``
+4. checkout the gh-pages branch (or the branch you're interested in)
+5. ``bundle exec jekyll serve`` and check the content at [http://localhost:4000](http://localhost:4000)
 
 Who
 ---
