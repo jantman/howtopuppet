@@ -1,45 +1,36 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: How to Puppet
+tagline: A community Puppet FAQ.
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+howtopuppet.com is intended to be a curated, up-to-date, _linkable_ repository for common
+questions and explanations, errors, and patterns for Puppet an related software.
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+Contributions are certainly welcome; see the [GitHub repository](https://github.com/jantman/howtopuppet)
+for more information.
 
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
+## Newest Additions
 
 <ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% for post in site.posts limit:5 %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> in {{ post.category }}</li>
   {% endfor %}
 </ul>
 
-## To-Do
+## All Posts by Category
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/dbtek/jekyll-bootstrap-3)!
+<ul class="tag_box inline">
+  {% assign categories_list = site.categories %}
+  {% include JB/categories_list %}
+</ul>
 
 
+{% for category in site.categories %} 
+  <h3 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h3>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}

@@ -1,34 +1,32 @@
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:title.html
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
 # https://help.github.com/articles/migrating-your-pages-site-from-maruku
-markdown: kramdown
+#markdown: kramdown
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap-3
-tagline: Site Tagline
+title : How to Puppet
+tagline: Community Puppet FAQ
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Jason Antman
+  email : jason@jasonantman.com
+  github : jantman
+  twitter : j_antman
 
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : http://username.github.io
+contributors_url: https://github.com/jantman/howtopuppet/graphs/contributors
+license_html: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+contribute_url: https://github.com/jantman/howtopuppet
+
+production_url : http://howtopuppet.com
+
+gems:
+- jekyll-redirect-from
+- jekyll-sitemap
+- jekyll-mentions
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -83,7 +81,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : false
     disqus :
       short_name : jekyllbootstrap
     livefyre :
