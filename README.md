@@ -61,7 +61,8 @@ In short:
 2. Checkout master
 3. ``bundle install``
 4. checkout the gh-pages branch (or the branch you're interested in)
-5. ``bundle exec jekyll serve`` and check the content at [http://localhost:4000](http://localhost:4000)
+5. ``bundle exec jekyll serve`` and check the content at [http://localhost:4000](http://localhost:4000). To have it watch for changed
+   files and continually regenerate content, append ``--watch``.
 
 Who
 ---
