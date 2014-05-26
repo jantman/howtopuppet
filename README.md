@@ -30,9 +30,25 @@ Contributing
 
 1. [Fork the repository](https://github.com/jantman/howtopuppet/fork)
 2. check out the ``gh-pages`` branch
-3. make your changes
+3. make your changes (see below)
 4. Optionally (but recommended) test locally (see below)
 5. Submit a pull request
+
+Adding a Post
+-------------
+
+Because of some limitations in how Jekyll works, dates have to be in the post filename.
+
+1. Figure out which category you're adding your post in.
+2. Copy ``post-template.md`` to a new file under ``_posts/categoryname`` named YYYY-MM-DD-slug.md, where
+   "categoryname" is the name of the category you chose, "YYYY-MM-DD" is the date on which
+   you're adding the post, and "slug" is a URL-safe, hyphen-separated version of the title of the post.
+3. Fill in the metadata fields at the top of the file, and the body of the post. I've put comments within
+   ">>>>" and "<<<<" that provide quick guidance on what each field should be. Be sure to add some
+   useful/pertinent tags.
+4. Since Jekyll __only__ does simple templating, there's no way to build short links to each post. So, grab
+   the integer out of ``/next_redirect`` in the repository, put it in the redirect\_from metadata field
+   on your post, and then increment the next\_redirect file.
 
 Testing Locally
 ---------------
