@@ -1,9 +1,0 @@
----
-layout: post
-category : Certificates and SSL
-tagline: "Something Here"
-tags : [intro, beginner, jekyll, tutorial]
----
-{% include JB/setup %}
-
-This is a post. certificates/something-here
